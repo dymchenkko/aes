@@ -10,3 +10,6 @@ risc0-build = "0.8"
 
 [dependencies]
 risc0-zkvm-guest = "0.8"
+aes-gcm = "0.9.4"
+serde = { version = "1.0", default-features = false }
+serde-big-array = "0.4.1"
