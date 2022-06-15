@@ -119,6 +119,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "checker-core"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_bytes",
+]
+
+[[package]]
 name = "cipher"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -280,10 +288,11 @@ name = "methods-guest"
 version = "0.1.0"
 dependencies = [
  "aes-gcm",
+ "checker-core",
  "risc0-build",
  "risc0-zkvm-guest",
  "serde",
- "serde-big-array",
+ "serde_bytes",
 ]
 
 [[package]]
@@ -507,10 +516,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "serde-big-array"
-version = "0.4.1"
+name = "serde_bytes"
+version = "0.11.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3323f09a748af288c3dc2474ea6803ee81f118321775bffa3ac8f7e65c5e90e7"
+checksum = "212e73464ebcde48d723aa02eb270ba62eff38a9b732df31f33f1b4e145f3a54"
 dependencies = [
  "serde",
 ]

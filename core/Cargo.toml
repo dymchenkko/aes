@@ -1,16 +1,10 @@
 [package]
-name = "methods-guest"
+name = "checker-core"
 version = "0.1.0"
 edition = "2021"
 
-[workspace]
-
-[build-dependencies]
-risc0-build = "0.8"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-risc0-zkvm-guest = "0.8"
-aes-gcm = "0.9.4"
 serde = { version = "1.0", default-features = false }
 serde_bytes = { version = "0.11.6", default-features = false, features = ["alloc"] }
-checker-core = { path = "../../core" }

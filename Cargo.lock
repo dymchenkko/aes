@@ -125,6 +125,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "checker-core"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_bytes 0.11.6 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "cipher"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -562,6 +570,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_bytes"
+version = "0.11.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "212e73464ebcde48d723aa02eb270ba62eff38a9b732df31f33f1b4e145f3a54"
+dependencies = [
+ "serde",
+]
+
+[[package]]
+name = "serde_bytes"
+version = "0.11.6"
+source = "git+https://github.com/dymchenkko/serde?branch=main#e761eebde658267e679728f55e3a52bf1fd33a9c"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "serde_derive"
 version = "1.0.137"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -599,12 +624,14 @@ name = "starter"
 version = "0.1.0"
 dependencies = [
  "aes-gcm",
+ "checker-core",
  "methods",
  "risc0-zkp-core",
  "risc0-zkvm-core",
  "risc0-zkvm-host",
  "risc0-zkvm-serde",
  "serde",
+ "serde_bytes 0.11.6 (git+https://github.com/dymchenkko/serde?branch=main)",
  "tempfile",
 ]
 
